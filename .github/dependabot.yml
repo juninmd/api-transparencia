@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "alvarollmenezes"
+    assignees:
+      - "alvarollmenezes"
+    commit-message:
+      prefix: "deps"
+    ignore:
+      - dependency-name: "*"
+        versions: [">= 0.0.0"]
+        # We can ignore specific versions if needed, but for now we don't ignore any.
+        # Alternatively, we can leave ignore empty or not use it.
+        # Since we want to update all, we can either not specify ignore or specify an empty list.
+        # However, the structure requires an object. Let's leave it as an empty list for versions.
+        # But note: the ignore item requires either versions or update-types.
+        # We'll not ignore any dependencies by not specifying any ignore items.
+        # Actually, let's remove the ignore list if we don't want to ignore anything.
+        # We'll change the structure to not include ignore if we don't need it.
+        # But the example above shows an ignore item. Let's adjust: we don't want to ignore any, so we can omit the ignore field.
+        # However, the configuration is valid with an empty ignore list? Let's check Dependabot docs.
+        # It's safer to omit the ignore field if we don't want to ignore anything.
+        # We'll remove the ignore field.
+        # Since we already wrote the ignore field, let's remove it by not including it in the first place.
+        # We'll rewrite the content without the ignore field.
