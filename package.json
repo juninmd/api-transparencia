@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/bin/www",
     "test": "jest --coverage",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
