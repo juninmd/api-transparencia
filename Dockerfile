@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.2.1
+FROM mhart/alpine-node:14.17.0
 
 # add project to build
 COPY src /root/api/src
@@ -8,8 +8,8 @@ WORKDIR /root/api
 
 RUN npm install
 
-ENV PORT 4242
+ENV PORT 3000
 
-EXPOSE 4242
+EXPOSE 3000
 
 CMD ["node", "src/bin/www"]
