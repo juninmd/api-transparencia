@@ -1,7 +1,7 @@
 # api-transparencia
 API com serviços do Portal da Transparência
 
-![CI/CD Pipeline](https://github.com/alvarollmenezes/base-nodejs-api/actions/workflows/ci.yml/badge.svg)
+![CI/CD Pipeline](https://github.com/juninmd/api-transparencia/actions/workflows/ci.yml/badge.svg)
 
 ## CI/CD Pipeline
 
