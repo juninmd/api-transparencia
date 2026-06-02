@@ -1,8 +1,21 @@
 describe('Application Configuration', () => {
-  describe('Port Configuration', () => {
-    beforeEach(() => {
-      jest.resetModules();
+  let originalEnv;
+
+  beforeEach(() => {
+    originalEnv = { ...process.env };
+    jest.resetModules();
+  });
+
+  afterEach(() => {
+    Object.keys(process.env).forEach((key) => {
+      if (!(key in originalEnv)) {
+        delete process.env[key];
+      } 
     });
+    Object.assign(process.env, originalEnv);
+  });
+
+  describe('Port Configuration', () => {
 
     test('should use PORT environment variable when set', () => {
       process.env.PORT = '8080';
